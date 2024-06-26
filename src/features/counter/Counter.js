@@ -85,18 +85,18 @@ export function Counter() {
 
 
 
-      <div className={styles.valueWrapper}>
+      <div>
       {(() => {
     if (count % 10 === 0&& count!== 0) {
         return (
             <div className={styles.box}>
-                <span className={styles.number}>{count}</span>
+                <span>{count}</span>
             </div>
         );
     } else {
         return (
           <div className={styles.box}>
-            <span className={styles.number}> <p>&#9825;</p>Hello world is not just a phrase, it is the beginning of the life of the program. The program comes to life and says hello to us.
+            <span> <p>&#9825;</p>Hello world is not just a phrase, it is the beginning of the life of the program. The program comes to life and says hello to us.
              </span>
              </div>
         );
