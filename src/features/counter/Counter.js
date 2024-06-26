@@ -7,6 +7,8 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
+  decrementByAmount,
+  decrementIfOdd,
 } from './counterSlice';
 import styles from './Counter.module.css';
 
@@ -62,6 +64,45 @@ export function Counter() {
           Add If Odd
         </button>
       </div>
+
+    
+      <div className={styles.row}>
+
+        <button
+          className={styles.button}
+          onClick={() => dispatch(decrementByAmount(incrementValue))}
+        >
+          Decrement Amount
+        </button>
+
+        <button
+          className={styles.button}
+          onClick={() => dispatch(decrementIfOdd(incrementValue))}
+        >
+          Decrement If Odd
+        </button>
+      </div>
+
+
+
+      <div className={styles.valueWrapper}>
+      {(() => {
+    if (count % 10 === 0&& count!== 0) {
+        return (
+            <div className={styles.box}>
+                <span className={styles.number}>{count}</span>
+            </div>
+        );
+    } else {
+        return (
+          <div className={styles.box}>
+            <span className={styles.number}> <p>&#9825;</p>Hello world is not just a phrase, it is the beginning of the life of the program. The program comes to life and says hello to us.
+             </span>
+             </div>
+        );
+    }
+})()}
+    </div>
     </div>
   );
 }

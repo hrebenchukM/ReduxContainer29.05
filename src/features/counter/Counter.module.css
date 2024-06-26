@@ -76,3 +76,9 @@
   opacity: 1;
   transition: 0s;
 }
+.box
+{
+  padding-bottom: 4px;
+  background-color: rgba(112, 76, 182, 0.1);
+  border-radius: 2px;
+}
